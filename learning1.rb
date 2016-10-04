@@ -1,40 +1,48 @@
 
+
 class Hello
 
-$globalvar = 'goodbye'
+#The $ symbol points out that "globalVar" is exactly that, global. Is not used on the code.
+$globalVar = 'goodbye'
 
+#Method that greets and asks our name, then it capitalizes the first letter of it
 	def decirHola
-   		localvar = 'hello'
-   		print('Hello!, please tell me your name ')
+   		localVar = 'hello'
+   		print('Hello!, please tell me your name: ')
   		name = gets
-  		print(localvar, " ", name.capitalize)
+  		print(localVar, " ", name.capitalize)
 	end
 
 end
 
+
+# A class that has a method to say goodbye and another one to tell us an interesting fact.
 class Adieu
-   
-   def decirTarde
-		print('Ah y por cierto, bonsoir tambien significa buenas tardes')	
-	end
-	
-  	def decirAdios
-   	    print('¿Quien dijiste que eras?')
-   	     quien = gets
-   	     puts("Nos vemos, buenas tardes don #{quien.capitalize}")
-   	end
+  def decirTarde
+    print('Oh, and by the way, bonsoir means good afternoon too') 
+  end
+  
+  def decirAdios
+      print('Â¿Who did you say you were?: ')
+        quien1 = gets
+      puts("See you around mr. #{quien1.capitalize}")
+  end
     
 end
 
+#This is for the super keyword testing.
+#It looks for a method that has the same name of where it is on the ancester class,
+#it is read like this :  child < ancester. 
 class Bonsoir < Adieu
-	def decirAdios
-		super
-	end
+  def decirTarde
+    super
+  end
 end
 
-juan1231231 = Hello.new
-juana = Adieu.new
-juan1231231.decirHola
-juana.decirAdios
-juanito = Bonsoir.new
-juanito.decirTarde
+#Execution of methods.
+hola = Hello.new
+hola.decirHola
+adios = Adieu.new
+adios.decirAdios
+bonsoir=Bonsoir.new
+bonsoir.decirTarde
