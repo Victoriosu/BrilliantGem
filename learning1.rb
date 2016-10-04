@@ -5,7 +5,7 @@ class Hello
 #The $ symbol points out that "globalVar" is exactly that, global. Is not used on the code.
 $globalVar = 'goodbye'
 
-#Method that greets and asks our name, then it capitalizes the first letter of it
+#Method that greets and asks our name, then it capitalizes the first letter of it.
 	def decirHola
    		localVar = 'hello'
    		print('Hello!, please tell me your name: ')
@@ -31,7 +31,7 @@ class Adieu
 end
 
 #This is for the super keyword testing.
-#It looks for a method that has the same name of where it is on the ancester class,
+#It looks for a method that has the same name of where it is on the ancester class
 #it is read like this :  child < ancester. 
 class Bonsoir < Adieu
   def decirTarde
