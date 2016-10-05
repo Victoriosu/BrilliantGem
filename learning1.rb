@@ -2,7 +2,7 @@
 
 class Hello
 
-#The $ symbol points out that "globalVar" is exactly that, global. Is not used on the code.
+#The $ symbol points out that "globalVar" is exactly that, global. Is used on a test 'puts' way down below.
 $globalVar = 'goodbye'
 
 #Method that greets and asks our name, then it capitalizes the first letter of it.
@@ -39,10 +39,30 @@ class Bonsoir < Adieu
   end
 end
 
+=begin 
+here we're going to start messing with objects ! (y)
+First we'll ust create a dog and define its class variables as its own accesors.
+=end
+
+class Perro
+  @@raza
+  @@nombre
+
+  def initialize(raza, nombre)
+    @raza = raza
+    @nombre = nombre
+  end
+ 
+  def getNombre
+    @nombre
+  end
+
+  def getRaza
+    @raza
+  end
+
+end
 #Execution of methods.
-hola = Hello.new
-hola.decirHola
-adios = Adieu.new
-adios.decirAdios
-bonsoir=Bonsoir.new
-bonsoir.decirTarde
+perro = Perro.new('Bull Terrier', 'Spunky')
+p(perro)
+puts("#{$globalVar} #{perro.getNombre}!")
