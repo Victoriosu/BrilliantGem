@@ -1,4 +1,4 @@
-
+﻿
 
 class Hello
 
@@ -45,24 +45,19 @@ First we'll ust create a dog and define its class variables as its own accesors.
 =end
 
 class Perro
-  @@raza
-  @@nombre
-
-  def initialize(raza, nombre)
-    @raza = raza
-    @nombre = nombre
-  end
- 
-  def getNombre
-    @nombre
-  end
-
-  def getRaza
-    @raza
-  end
-
+	attr_accessor :nombre, :raza
+	
+	def initialize(nombre, raza)
+		@nombre=nombre
+		@raza=raza
+	end
+	
+	def decirDatos()
+		puts("#{$globalVar} #{nombre}! y su raza es un #{raza}" )
+	end
 end
 #Execution of methods.
-perro = Perro.new('Bull Terrier', 'Spunky')
+perro = Perro.new('Spunky', 'Yorkshire')
 p(perro)
-puts("#{$globalVar} #{perro.getNombre}!")
+perro.decirDatos
+
