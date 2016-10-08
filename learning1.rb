@@ -3,6 +3,11 @@
 class Animal
 	attr_accessor :family, :legs, :eyes
 
+	def initialize(family, legs, eyes)
+		@family=family
+		@legs=legs
+		@eyes=eyes
+	end	
 	def countEyes
 		if  @family == ('feline') || @family == ('canine')
 			print('The animal has 2 eyes')
@@ -13,18 +18,16 @@ class Animal
 end
 
 class Perro < Animal
-	attr_accessor  :nombre, :raza
+	attr_accessor :nombre, :raza
 	
 	def countEyes()
 		super
 	end
 
-	def initialize(nombre, raza, family, legs, eyes)
+	def initialize(nombre,raza,family,legs,eyes)
 		@nombre=nombre
 		@raza=raza
-		@family=family
-		@legs=legs
-		@eyes=eyes
+		super(family,legs,eyes)
 	end
 	
 	def printSentence()
