@@ -69,3 +69,7 @@ perro.countEyes
 =end
 spider = Araña.new('3 cms.','Spain', 'Arachnid', 8, 6)
 spider.printData
+#puts("And the actual directory is #{%x{dir}}")
+#s = "Hello world" 
+#puts( s[1] )
+#page34
