@@ -60,12 +60,21 @@ class Araña < Animal
 	end
 end
 
-#Execution of methods.
 =begin
-perro = Perro.new('Spunky', 'Yorkshire','canine', 4, 2)
-p(perro)
-perro.printSentence
-perro.countEyes
+#Execution of methods.
+useful to-test methods
+puts(s.chomp("world"))
+puts( s[1] )
+page34
 =end
-spider = Araña.new('3 cms.','Spain', 'Arachnid', 8, 6)
-spider.printData
+#Arrays
+
+def hello
+	return "Hello"
+end
+
+k = [5, "dog", hello, true, 5.05, `dir`]
+puts k[2]
+puts k[5]
+
+
