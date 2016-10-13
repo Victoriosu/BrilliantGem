@@ -60,6 +60,10 @@ class Araña < Animal
 	end
 end
 
+
+
+
+
 =begin
 #Execution of methods.
 useful to-test methods
@@ -70,11 +74,26 @@ page34
 #Arrays
 
 def hello
-	return "Hello"
+	return "Hello World"
 end
 
-k = [5, "dog", hello, true, 5.05, `dir`]
-puts k[2]
-puts k[5]
+
+@k = [[`dir`, "dog", hello, true, 5.05],["one", 2, "three", 4]]
+
+=begin
+def iterate1
+for row in @k
+ for item in row
+ puts(item)
+ end
+end
+end
+=end
+
+#I still don't know how this works exactly, but is you put '...' which is equivalent to put a double quoted evaluation
+#it doesn't print both of the arrays, but if you do it with single quotes (..) it does.
+puts @k[0..1]
+#puts @k[5]
+
 
 
